@@ -1,7 +1,7 @@
 function generarPDF(logoDataURL) {
   const adultos = document.getElementById("adultos").value;
   const menores = document.getElementById("menores").value;
-  const nombre = document.getElementById("nombre").valuetoUpperCase();
+  const nombre = document.getElementById("nombre").value.toUpperCase();
   const dif_corp = document.getElementById("dif_corp").innerText;
   const dif_vip = document.getElementById("dif_vip").innerText;
 
