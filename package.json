@@ -1,0 +1,16 @@
+{
+  "name": "medicalgroupv3",
+  "version": "1.0.0",
+  "description": "Cotizador",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eze Guaimas",
+  "license": "ISC",
+  "dependencies": {
+    "pdfmake": "^0.2.7"
+  }
+}
