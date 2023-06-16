@@ -91,3 +91,36 @@ borrarBtn.addEventListener("click", function () {
 });
 const botonCalcular = document.getElementById("botonCalcular");
 botonCalcular.addEventListener("click", calcular);
+
+
+
+// const darkModeSwitch = document.getElementById("darkModeSwitch");
+// const themeStylesheet = document.getElementById("themeStylesheet");
+
+// darkModeSwitch.addEventListener("change", function() {
+//   if (this.checked) {
+//     themeStylesheet.href = "modoOscuro.css";
+//   } else {
+//     themeStylesheet.href = "modoClaro.css";
+//   }
+// });
+
+const darkModeSwitch = document.getElementById("darkModeSwitch");
+const themeStylesheet = document.getElementById("themeStylesheet");
+const themeTransitionElement = document.getElementById("themeTransitionElement");
+
+darkModeSwitch.addEventListener("change", function() {
+  if (this.checked) {
+    themeTransitionElement.style.opacity = "1";
+    setTimeout(() => {
+      themeStylesheet.href = "modoOscuro.css";
+      themeTransitionElement.style.opacity = "0";
+    }, 300);
+  } else {
+    themeTransitionElement.style.opacity = "1";
+    setTimeout(() => {
+      themeStylesheet.href = "modoClaro.css";
+      themeTransitionElement.style.opacity = "0";
+    }, 300);
+  }
+});

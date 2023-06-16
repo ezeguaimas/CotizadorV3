@@ -10,7 +10,13 @@
       href="https://fonts.googleapis.com/css?family=Great+Vibes"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="switchButton.css">
+    <!-- <link id="themeStylesheet" rel="stylesheet" type="text/css" href="modoClaro.css" > -->
+    <link id="themeStylesheet" rel="stylesheet" href="modoClaro.css">
+    <div id="themeTransitionElement"></div>
+    
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"
       integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="
@@ -23,8 +29,18 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="./logoMedical.png" alt="Logo de la mini app" />
+      <img class="logo" src="./logoMedical.png" alt="Logo de la mini app" />                  
     </header>
+
+    <div class="switch-container">
+      <div id="darkModeToggle">
+        <label class="switch">
+          <input type="checkbox" id="darkModeSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
 
     <label for="aporte">Aportes</label>
     <input type="number" id="aporte1" />
@@ -127,6 +143,11 @@
         <span class="buttonText">Certificación Negativa</span>
       </div>
     </div>
+
+    <!-- <div id="darkModeToggle">
+      <button id="modoClaro">Modo Claro</button>
+      <button id="modoOscuro">Modo Oscuro</button>
+    </div> -->
 
     <footer>
       Hecho con
