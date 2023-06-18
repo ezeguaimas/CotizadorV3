@@ -1,67 +1,72 @@
 .switch-container {
-    display: flex;
-    align-items: end;
-    justify-content: flex-end;
-    position:relative;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background-color: darkred;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 1.5rem;
+  right: 20px;
+}
 
-  .theme-transition {
-    transition: opacity 1s ease-in-out;
-  }
-  
+img {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#toggle-container {
+  transform: scale(0.6);
+}
+
+#toggle-container .toggle input {
+  display: none;
+}
+#toggle-container .toggle input:checked ~ span {
+  border-color: #333;
+  background: #2c4e63;
+}
+#toggle-container .toggle input:checked ~ span:before {
+  left: 5.5rem;
+  box-shadow: inset -1rem 0rem 0 0.25rem #ffc207;
+  background: transparent;
+}
+#toggle-container .toggle input:checked ~ span:after {
+  content: "★";
+  top: 1rem;
+  left: 5rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  color: #ffc207;
+}
+#toggle-container .toggle span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 5rem;
+  border: 0.25rem solid #666;
+  background: #5197c4;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#toggle-container .toggle span:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  box-shadow: inset -4rem -4rem 0 0 #ffc207;
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+#toggle-container .toggle span:after {
+  content: "☁";
+  position: absolute;
+  top: 1rem;
+  left: 1.75rem;
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+  font-size: 4rem;
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
