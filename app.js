@@ -7,10 +7,10 @@ function calcular() {
   let menores = document.getElementById("menores").value.trim();
 
   // Valores de los planes
-  const corpAdulto = 4550 //4140; //3310; //2760;
-  const corpMenor = 4550 //4140; //3310; //2760;
-  const vipAdulto = 8580 //7800; //6240; //5200;
-  const vipMenor = 8580 //7800; //4680; //3900;
+  const corpAdulto = 5700 //4550 //4140; //3310; //2760;
+  const corpMenor = 5700 //4550 //4140; //3310; //2760;
+  const vipAdulto = 9330 //8580 //7800; //6240; //5200;
+  const vipMenor = 9330 //8580 //7800; //4680; //3900;
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
