@@ -3,6 +3,7 @@ function generarPDF(logoDataURL) {
   const menores = document.getElementById("menores").value;
   const nombre = document.getElementById("nombre").value.toUpperCase();
   const dif_corp = document.getElementById("dif_corp").innerText;
+  const dif_mg = document.getElementById("dif_mg").innerText;
   const dif_vip = document.getElementById("dif_vip").innerText;
 
   const fecha = new Date();
@@ -80,6 +81,29 @@ function generarPDF(logoDataURL) {
                     fontSize: 16,
                   },
                   {
+                    text: "PLAN: MG",
+                    style: "subheader",
+                    margin: [10, 20, 10, 10],
+                    fontSize: 18,
+                    bold: true,
+                  },
+                  {
+                    text: "Diferencia a Pagar $: " + dif_mg,
+                    margin: [20, 0],
+                    fontSize: 18,
+                    bold: true,
+                  },
+                  {
+                    text:
+                      "Observaciones: Ingresan " +
+                      adultos +
+                      " Adultos, " +
+                      menores +
+                      " menor/es.",
+                    margin: [40, 10],
+                    fontSize: 16,
+                  },
+                  {
                     text: "PLAN: VIP",
                     style: "subheader",
                     margin: [10, 20, 10, 10],
@@ -103,10 +127,14 @@ function generarPDF(logoDataURL) {
                     fontSize: 16,
                   },
                   {
-                    text: "Precios sujetos a aumentos y/o modificaciones de la Superintendencia de Salud de la Nación.",
+                    text: "Los precios están sujetos a cambios y/o modificaciones por parte de la Superintendencia de Servicios de Salud de la Nación.",
                     style: "footer",
-                    margin: [10, 220, 10, 20],
+                    margin: [10, 120, 10, 20],
                     fontSize: 14,
+                    bold: true,
+                    decoration: "underline",
+                    alignment: "justify",
+                    color: "#840000",
                   },
                 ],
               },

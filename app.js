@@ -7,14 +7,16 @@ function calcular() {
   let menores = document.getElementById("menores").value.trim();
 
   // Valores de los planes
-  const corpAdulto = 5700 //4550 //4140; //3310; //2760;
-  const corpMenor = 5700 //4550 //4140; //3310; //2760;
-  const vipAdulto = 9330 //8580 //7800; //6240; //5200;
-  const vipMenor = 9330 //8580 //7800; //4680; //3900;
+  const corpAdulto = 7640 //5700 //4550 //4140; //3310; //2760;
+  const corpMenor = 7640 //5700 //4550 //4140; //3310; //2760;
+  const mgAdulto = 10080
+  const mgMenor = 10080
+  const vipAdulto = 12540 //9330 //8580 //7800; //6240; //5200;
+  const vipMenor = 12540 //9330 //8580 //7800; //4680; //3900;
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
-  const montoMaximo = 642142.18;
+  const montoMaximo = 776478.32 //642142.18;
 
   if (sueldoBruto > montoMaximo) {
     sueldoBruto = montoMaximo;
@@ -37,14 +39,22 @@ function calcular() {
 
   const aporteTotal = aporteOS;
   const corpDif = aporteTotal - (corpAdulto * adultos + corpMenor * menores);
+  const mgDif = aporteTotal - (mgAdulto * adultos + mgMenor * menores);
   const vipDif = aporteTotal - (vipAdulto * adultos + vipMenor * menores);
   let renderCorp = 0;
+  let renderMg = 0;
   let renderVip = 0;
 
   if (corpDif > 0) {
     renderCorp = "No Paga Diferencia";
   } else {
     renderCorp = Math.abs(corpDif);
+  }
+
+  if (mgDif > 0) {
+    renderMg = "No Paga Diferencia";
+  } else {
+    renderMg = Math.abs(mgDif);
   }
 
   if (vipDif > 0) {
@@ -59,6 +69,8 @@ function calcular() {
   document.getElementById("aporte_total").textContent = aporteTotal.toFixed(2);
   document.getElementById("dif_corp").textContent =
     typeof renderCorp === "number" ? renderCorp.toFixed(2) : renderCorp;
+  document.getElementById("dif_mg").textContent =
+    typeof renderMg === "number" ? renderMg.toFixed(2) : renderMg;
   document.getElementById("dif_vip").textContent =
     typeof renderVip === "number" ? renderVip.toFixed(2) : renderVip;
 
@@ -85,6 +97,7 @@ borrarBtn.addEventListener("click", function () {
   document.getElementById("aporte_os").textContent = "";
   document.getElementById("aporte_total").textContent = "";
   document.getElementById("dif_corp").textContent = "";
+  document.getElementById("dif_mg").textContent = "";
   document.getElementById("dif_vip").textContent = "";
   calcular();
   ocultarResultados();
