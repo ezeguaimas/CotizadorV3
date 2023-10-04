@@ -129,18 +129,20 @@ darkModeSwitch.addEventListener("change", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Obtener elementos del DOM
-  var inputTelefono = document.getElementById("whatsapp");
-  var btnEnviar = document.getElementById("enviarWhatsapp");
+  let inputTelefono = document.getElementById("whatsapp");
+  let btnEnviar = document.getElementById("enviarWhatsapp");
 
   // Agregar un evento click al botón
   btnEnviar.addEventListener("click", function () {
     // Obtener el valor del campo de entrada
-    var telefono = inputTelefono.value;
+    let telefono = inputTelefono.value;
 
     // Validar que el campo no esté vacío
     if (telefono.trim() !== "") {
       // Construir la URL de WhatsApp con el número de teléfono
-      var urlWhatsapp = "https://wa.me/+549" + telefono;
+      //var urlWhatsapp = "https://wa.me/+549" + telefono;
+      let urlWhatsapp = "https://api.whatsapp.com/send?phone=549" + telefono;
+
 
       // Redirigir a la URL de WhatsApp
       window.location.href = urlWhatsapp;
