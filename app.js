@@ -126,3 +126,26 @@ darkModeSwitch.addEventListener("change", function () {
     }, 300);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener elementos del DOM
+  var inputTelefono = document.getElementById("whatsapp");
+  var btnEnviar = document.getElementById("enviarWhatsapp");
+
+  // Agregar un evento click al botón
+  btnEnviar.addEventListener("click", function () {
+    // Obtener el valor del campo de entrada
+    var telefono = inputTelefono.value;
+
+    // Validar que el campo no esté vacío
+    if (telefono.trim() !== "") {
+      // Construir la URL de WhatsApp con el número de teléfono
+      var urlWhatsapp = "https://wa.me/+549" + telefono;
+
+      // Redirigir a la URL de WhatsApp
+      window.location.href = urlWhatsapp;
+    } else {
+      alert("Por favor, ingresa un número de teléfono válido.");
+    }
+  });
+});
