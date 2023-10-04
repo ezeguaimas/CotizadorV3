@@ -130,7 +130,7 @@ darkModeSwitch.addEventListener("change", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Obtener elementos del DOM
   let inputTelefono = document.getElementById("whatsapp");
-  let btnEnviar = document.getElementById("enviarWhatsapp");
+  let btnEnviar = document.getElementById("botonWhatsapp");
 
   // Agregar un evento click al botón
   btnEnviar.addEventListener("click", function () {
