@@ -197,3 +197,18 @@ hr {
   transition: opacity 0.3s ease-in-out;
   z-index: 9999;
 }
+
+#botonWhatsapp img {
+  width: 5rem; /* Ajusta el ancho según tus necesidades */
+  height: 5rem; /* Ajusta la altura según tus necesidades */
+  margin-left: 10px; /* Ajusta el margen entre el icono y el texto según tus necesidades */
+}
+
+#enviarWhatsapp {
+  display: flex;
+  align-items: center;
+}
+
+#enviarWhatsapp input {
+  max-width: 90%;
+}

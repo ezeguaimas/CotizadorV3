@@ -191,3 +191,9 @@ footer {
     z-index: 9999;
   }
   
+  #enviarWhatsapp img {
+    width: 20px; /* Ajusta el ancho según tus necesidades */
+    height: 20px; /* Ajusta la altura según tus necesidades */
+    margin-right: 5px; /* Ajusta el margen entre el icono y el texto según tus necesidades */
+  }
+  

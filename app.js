@@ -7,16 +7,16 @@ function calcular() {
   let menores = document.getElementById("menores").value.trim();
 
   // Valores de los planes
-  const corpAdulto = 8170 //7640 //5700 //4550 //4140; //3310; //2760;
-  const corpMenor = 8170 //7640 //5700 //4550 //4140; //3310; //2760;
-  const mgAdulto = 10780 //10080
-  const mgMenor = 10780 //10080
-  const vipAdulto = 13410 //12540 //9330 //8580 //7800; //6240; //5200;
-  const vipMenor = 13410 //12540 //9330 //8580 //7800; //4680; //3900;
+  const corpAdulto = 8170; //7640 //5700 //4550 //4140; //3310; //2760;
+  const corpMenor = 8170; //7640 //5700 //4550 //4140; //3310; //2760;
+  const mgAdulto = 10780; //10080
+  const mgMenor = 10780; //10080
+  const vipAdulto = 13410; //12540 //9330 //8580 //7800; //6240; //5200;
+  const vipMenor = 13410; //12540 //9330 //8580 //7800; //4680; //3900;
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
-  const montoMaximo = 776478.32 //642142.18;
+  const montoMaximo = 776478.32; //642142.18;
 
   if (sueldoBruto > montoMaximo) {
     sueldoBruto = montoMaximo;
@@ -140,12 +140,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validar que el campo no esté vacío
     if (telefono.trim() !== "") {
       // Construir la URL de WhatsApp con el número de teléfono
-      //var urlWhatsapp = "https://wa.me/+549" + telefono;
       let urlWhatsapp = "https://api.whatsapp.com/send?phone=549" + telefono;
 
-
-      // Redirigir a la URL de WhatsApp
-      window.location.href = urlWhatsapp;
+      // Abrir la URL en una nueva pestaña
+      window.open(urlWhatsapp, "_blank");
     } else {
       alert("Por favor, ingresa un número de teléfono válido.");
     }
