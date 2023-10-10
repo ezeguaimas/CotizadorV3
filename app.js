@@ -7,16 +7,16 @@ function calcular() {
   let menores = document.getElementById("menores").value.trim();
 
   // Valores de los planes
-  const corpAdulto = 8170; //7640 //5700 //4550 //4140; //3310; //2760;
-  const corpMenor = 8170; //7640 //5700 //4550 //4140; //3310; //2760;
-  const mgAdulto = 10780; //10080
-  const mgMenor = 10780; //10080
-  const vipAdulto = 13410; //12540 //9330 //8580 //7800; //6240; //5200;
-  const vipMenor = 13410; //12540 //9330 //8580 //7800; //4680; //3900;
+  const corpAdulto = 9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
+  const corpMenor = 9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
+  const mgAdulto = 11970 //10780 //10080
+  const mgMenor = 11970 //10780 //10080
+  const vipAdulto = 14880 //13410 //12540 //9330 //8580 //7800; //6240; //5200;
+  const vipMenor = 14880 //13410 //12540 //9330 //8580 //7800; //4680; //3900;
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
-  const montoMaximo = 776478.32; //642142.18;
+  const montoMaximo = 957320.12 //776478.32; //642142.18;
 
   if (sueldoBruto > montoMaximo) {
     sueldoBruto = montoMaximo;
