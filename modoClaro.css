@@ -192,9 +192,9 @@ footer {
   }
   
   #botonWhatsapp img {
-    width: 5rem; /* Ajusta el ancho según tus necesidades */
-    height: 5rem; /* Ajusta la altura según tus necesidades */
-    margin-left: 10px; /* Ajusta el margen entre el icono y el texto según tus necesidades */
+    width: 5rem; 
+    height: 5rem; 
+    margin-left: 10px;
   }
   
   #enviarWhatsapp {
