@@ -7,16 +7,18 @@ function calcular() {
   let menores = document.getElementById("menores").value.trim();
 
   // Valores de los planes
-  const corpAdulto = 10110 //9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
-  const corpMenor = 10110 //9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
-  const mgAdulto = 0 //11970 //10780 //10080
-  const mgMenor = 0 //11970 //10780 //10080
-  const vipAdulto = 16590 //14880 //13410 //12540 //9330 //8580 //7800; //6240; //5200;
-  const vipMenor = 16590 //14880 //13410 //12540 //9330 //8580 //7800; //4680; //3900;
+  const basicAdulto = 7760
+  const basicMenor = 7760
+  const corpAdulto = 11630 //10110 //9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
+  const corpMenor = 11630 //10110 //9070 //8170 //7640 //5700 //4550 //4140; //3310; //2760;
+  const mgAdulto = 15350 //0 //11970 //10780 //10080
+  const mgMenor = 15350 //0 //11970 //10780 //10080
+  const vipAdulto = 19080 //16590 //14880 //13410 //12540 //9330 //8580 //7800; //6240; //5200;
+  const vipMenor = 19080 //16590 //14880 //13410 //12540 //9330 //8580 //7800; //4680; //3900;
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
-  const montoMaximo = 957320.12 //776478.32; //642142.18;
+  const montoMaximo = 1157112.83 //957320.12 //776478.32; //642142.18;
 
   if (sueldoBruto > montoMaximo) {
     sueldoBruto = montoMaximo;
@@ -38,12 +40,20 @@ function calcular() {
   const aporteOS = sueldoBruto * 0.0765;
 
   const aporteTotal = aporteOS;
+  const basicDif = aporteTotal - (basicAdulto * adultos + basicMenor * menores);
   const corpDif = aporteTotal - (corpAdulto * adultos + corpMenor * menores);
   const mgDif = aporteTotal - (mgAdulto * adultos + mgMenor * menores);
   const vipDif = aporteTotal - (vipAdulto * adultos + vipMenor * menores);
+  let renderBasic = 0;
   let renderCorp = 0;
   let renderMg = 0;
   let renderVip = 0;
+
+  if (basicDif > 0) {
+    renderBasic = "No Paga Diferencia";
+  } else {
+    renderBasic = Math.abs(basicDif);
+  }
 
   if (corpDif > 0) {
     renderCorp = "No Paga Diferencia";
@@ -67,6 +77,8 @@ function calcular() {
   document.getElementById("sueldo_bruto").textContent = sueldoBruto.toFixed(2);
   document.getElementById("aporte_os").textContent = aporteOS.toFixed(2);
   document.getElementById("aporte_total").textContent = aporteTotal.toFixed(2);
+  document.getElementById("dif_basic").textContent =
+    typeof renderBasic === "number" ? renderBasic.toFixed(2) : renderBasic;
   document.getElementById("dif_corp").textContent =
     typeof renderCorp === "number" ? renderCorp.toFixed(2) : renderCorp;
   document.getElementById("dif_mg").textContent =
@@ -96,6 +108,7 @@ borrarBtn.addEventListener("click", function () {
   document.getElementById("sueldo_bruto").textContent = "";
   document.getElementById("aporte_os").textContent = "";
   document.getElementById("aporte_total").textContent = "";
+  document.getElementById("dif_basic").textContent = "";
   document.getElementById("dif_corp").textContent = "";
   document.getElementById("dif_mg").textContent = "";
   document.getElementById("dif_vip").textContent = "";
