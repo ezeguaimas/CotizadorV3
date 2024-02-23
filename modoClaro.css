@@ -207,9 +207,9 @@ footer {
   }  
 
   #version {
-    font-size: 1rem;
+    font-size: 5rem;
     line-height: 100%;
-    color: greenyellow;
+    color: darkred;
   }
   
   .version {
