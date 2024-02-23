@@ -212,3 +212,14 @@ hr {
 #enviarWhatsapp input {
   max-width: 90%;
 }
+
+#version {
+  font-size: 1rem;
+  line-height: 100%;
+  color: greenyellow;
+
+}
+
+.version {
+  text-align: right;
+}
