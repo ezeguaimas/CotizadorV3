@@ -13,6 +13,12 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 5%;
+
+  background-image: url("./Img/fondoOscuro.jpg");
+  background-size: contain; /* Esto hará que la imagen se ajuste al tamaño del cuerpo */
+  background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+  background-position: bottom; /* Esto centra la imagen en el cuerpo */
+  /* El resto de tus estilos de body van aquí */
 }
 
 .container {
@@ -213,11 +219,24 @@ hr {
 }
 
 #version {
-  font-size: .5rem;
+  font-size: 0.5rem;
   line-height: 100%;
   color: greenyellow;
+  margin-top: 0;
+  margin-bottom: 0;
+
 }
 
 .version {
   text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+
 }
+
+.version p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
