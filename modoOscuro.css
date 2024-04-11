@@ -79,6 +79,10 @@ button {
   margin: 20px 0;
 }
 
+#botonCotizarPrepago {
+  background-color: blue;
+}
+
 button:hover {
   background-color: #cc0000;
 }
