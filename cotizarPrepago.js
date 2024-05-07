@@ -4,14 +4,14 @@ function cotizarPrepago(logoDataURL) {
   const nombre = document.getElementById("nombre").value.toUpperCase();
 
   // Valores de los planes
-const basicAdulto = 23650 
-const basicMenor = 23650
-const corpAdulto = 33700
-const corpMenor = 33700
-const mgAdulto = 39080
-const mgMenor = 35170
-const vipAdulto = 44500
-const vipMenor = 40050
+const basicAdulto = 26250 
+const basicMenor = 26250
+const corpAdulto = 37410
+const corpMenor = 37410
+const mgAdulto = 43380
+const mgMenor = 43380
+const vipAdulto = 49400
+const vipMenor = 49400
 
   const dif_basic = ((Number(adultos) * basicAdulto) + (Number(menores) * basicMenor))
   const dif_corp = ((Number(adultos) * corpAdulto) + (Number(menores) * corpMenor))
