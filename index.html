@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizador v3</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QBMTS236MK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-QBMTS236MK");
+    </script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css?family=Great+Vibes"
@@ -26,26 +40,25 @@
   </head>
   <body>
     <div class="version">
-      <p><span id="version">v. 07-05-2024 00:45</span></p>
+      <p><span id="version">v. 30-05-2024 21:00</span></p>
     </div>
-    
+
     <header>
       <img class="logo" src="./logoMedical.png" alt="Logo de la mini app" />
     </header>
 
-          <!-- BOTON toggle -->
-          <div class="switch-container">
-            <div id="toggle-container">
-              <div class="toggle" title="toggle dark mode">
-                <label id="label-toggle">
-                  <input type="checkbox" name="" id="darkModeSwitch" checked/>
-                  <span></span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <!-- BOTON toggle -->
-    
+    <!-- BOTON toggle -->
+    <div class="switch-container">
+      <div id="toggle-container">
+        <div class="toggle" title="toggle dark mode">
+          <label id="label-toggle">
+            <input type="checkbox" name="" id="darkModeSwitch" checked />
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- BOTON toggle -->
 
     <label for="aporte">Aportes</label>
     <input type="number" id="aporte1" />
@@ -100,12 +113,12 @@
 
     <label for="whatsapp">Enviar Whatsapp</label>
     <div id="enviarWhatsapp">
-    <input
-      type="number"
-      id="whatsapp"
-      placeholder="Ingresar teléfono - Ej: 387XXXXXXX"
-    />
-    <!-- <button
+      <input
+        type="number"
+        id="whatsapp"
+        placeholder="Ingresar teléfono - Ej: 387XXXXXXX"
+      />
+      <!-- <button
       type="button"
       id="enviarWhatsapp"
     >
@@ -113,16 +126,13 @@
     <img src="./Img/wa.png" alt="WhatsApp" />
     </button> -->
 
-    <span
-    id="botonWhatsapp"
-  >
-  <img src="./Img/wa.png" alt="WhatsApp" />
-  </span>
-</div>
-    
+      <span id="botonWhatsapp">
+        <img src="./Img/wa.png" alt="WhatsApp" />
+      </span>
+    </div>
+
     <hr />
     <hr style="width: 100%" />
-
 
     <div id="buttonContainer">
       <div class="buttonContainer">
