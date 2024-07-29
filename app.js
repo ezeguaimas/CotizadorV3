@@ -18,7 +18,7 @@ function calcular() {
 
   let sueldoBruto = (aporte1 + aporte2 + aporte3 + aporte4) / 0.03;
 
-  const montoMaximo = 2081258.67 //1874838.91 //1471616.10 //1157112.83 //957320.12 //776478.32; //642142.18;
+  const montoMaximo = 2359712.22 //2081258.67 //1874838.91 //1471616.10 //1157112.83 //957320.12 //776478.32; //642142.18;
 
   if (sueldoBruto > montoMaximo) {
     sueldoBruto = montoMaximo;
