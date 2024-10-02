@@ -1,17 +1,21 @@
-function cotizarPrepago(logoDataURL) {
+function cotizarMonotributo(logoDataURL) {
+  const aporte1 = parseFloat(document.getElementById("aporte1").value) || 0;
+  const aporte2 = parseFloat(document.getElementById("aporte2").value) || 0;
+  const aporte3 = parseFloat(document.getElementById("aporte3").value) || 0;
+  const aporte4 = parseFloat(document.getElementById("aporte4").value) || 0;
   const adultos = document.getElementById("adultos").value;
   const menores = document.getElementById("menores").value;
   const nombre = document.getElementById("nombre").value.toUpperCase();
 
   // Valores de los planes
-const basicAdulto = 33750 //32390 //28560 //26250 
-const basicMenor = 33750 //32390 //28560 //26250
-const corpAdulto = 48090 //46150 //40700 //37410
-const corpMenor = 48090 //46150 //40700 //37410
-const mgAdulto = 55780 //53530 //47200 //43380
-const mgMenor = 55780 //53530 //47200 //43380
-const vipAdulto = 63510 //60950 //53750 //49400
-const vipMenor = 63510 //60950 //53750 //49400
+const basicAdulto = 32390 //28560 //26250 
+const basicMenor = 32390 //28560 //26250
+const corpAdulto = 46150 //40700 //37410
+const corpMenor = 46150 //40700 //37410
+const mgAdulto = 53530 //47200 //43380
+const mgMenor = 53530 //47200 //43380
+const vipAdulto = 60950 //53750 //49400
+const vipMenor = 60950 //53750 //49400
 
   const dif_basic = ((Number(adultos) * basicAdulto) + (Number(menores) * basicMenor))
   const dif_corp = ((Number(adultos) * corpAdulto) + (Number(menores) * corpMenor))
@@ -55,7 +59,7 @@ const vipMenor = 63510 //60950 //53750 //49400
                     fontSize: 16,
                   },
                   {
-                    text: "COTIZACIÓN PREPAGO",
+                    text: "COTIZACIÓN MONOTRIBUTO",
                     style: "header",
                     fontSize: 24,
                     decoration: "underline",
@@ -201,8 +205,8 @@ const vipMenor = 63510 //60950 //53750 //49400
   pdfMake.createPdf(docDefinition).download("cotizacion_" + nombre + ".pdf");
 }
 
-const botonCotizarPrepago = document.getElementById("botonCotizarPrepago");
-botonCotizarPrepago.addEventListener("click", function () {
+const botonCotizarMonotributo = document.getElementById("botonCotizarMonotributo");
+botonCotizarMonotributo.addEventListener("click", function () {
   const logoURL = "Img/mgLogo.png";
 
   fetch(logoURL)
@@ -211,7 +215,7 @@ botonCotizarPrepago.addEventListener("click", function () {
       const reader = new FileReader();
       reader.onloadend = function () {
         const logoDataURL = reader.result;
-        cotizarPrepago(logoDataURL);
+        cotizarMonotributo(logoDataURL);
       };
       reader.readAsDataURL(blob);
     })
