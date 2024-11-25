@@ -228,19 +228,26 @@ hr {
   color: greenyellow;
   margin-top: 0;
   margin-bottom: 0;
-
 }
 
 .version {
   text-align: right;
   margin-top: 0;
   margin-bottom: 0;
-
 }
 
 .version p {
   margin-top: 0;
   margin-bottom: 0;
-
 }
 
+#gif {
+  display: block;
+  margin: 0 auto;
+  height: 35rem;
+}
+
+#gif img {
+  height: 15rem;
+  margin-top: 5%;
+}
