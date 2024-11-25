@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   margin: 5%;
 
-  background-image: url("./Img/fondoOscuro.jpg");
+  background-image: url("./Img/fondoOscuro.png");
   background-size: contain; /* Esto hará que la imagen se ajuste al tamaño del cuerpo */
   background-repeat: no-repeat; /* Esto evita que la imagen se repita */
   background-position: bottom; /* Esto centra la imagen en el cuerpo */
