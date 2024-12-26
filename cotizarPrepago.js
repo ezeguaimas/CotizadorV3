@@ -4,14 +4,14 @@ function cotizarPrepago(logoDataURL) {
   const nombre = document.getElementById("nombre").value.toUpperCase();
 
   // Valores de los planes
-const basicAdulto = 35870 //34930 //33750 //32390 //28560 //26250 
-const basicMenor = 35870 //34930 //33750 //32390 //28560 //26250
-const corpAdulto = 51110 //49770 //48090 //46150 //40700 //37410
-const corpMenor = 51110 //49770 //48090 //46150 //40700 //37410
-const mgAdulto = 59290 //57730 //55780 //53530 //47200 //43380
-const mgMenor = 59290 //57730 //55780 //53530 //47200 //43380
-const vipAdulto = 67510 //65730 //63510 //60950 //53750 //49400
-const vipMenor = 67510 //65730 //63510 //60950 //53750 //49400
+const basicAdulto = 36730 //35870 //34930 //33750 //32390 //28560 //26250 
+const basicMenor = 36730 //35870 //34930 //33750 //32390 //28560 //26250
+const corpAdulto = 52340 //51110 //49770 //48090 //46150 //40700 //37410
+const corpMenor = 52340 //51110 //49770 //48090 //46150 //40700 //37410
+const mgAdulto = 60710 //59290 //57730 //55780 //53530 //47200 //43380
+const mgMenor = 60710 //59290 //57730 //55780 //53530 //47200 //43380
+const vipAdulto = 69130 //67510 //65730 //63510 //60950 //53750 //49400
+const vipMenor = 69130 //67510 //65730 //63510 //60950 //53750 //49400
 
   const dif_basic = ((Number(adultos) * basicAdulto) + (Number(menores) * basicMenor))
   const dif_corp = ((Number(adultos) * corpAdulto) + (Number(menores) * corpMenor))
