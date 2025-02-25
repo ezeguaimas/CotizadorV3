@@ -14,11 +14,10 @@ body {
   min-height: 100vh;
   margin: 5%;
 
-  background-image: url("./Img/fondoClaro.jpg");
-  background-size: contain; /* Esto hará que la imagen se ajuste al tamaño del cuerpo */
-  background-repeat: no-repeat; /* Esto evita que la imagen se repita */
-  background-position: bottom; /* Esto centra la imagen en el cuerpo */
-  /* El resto de tus estilos de body van aquí */
+  /*background-image: url("./Img/fondoClaro.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;*/
 }
 
 .container {

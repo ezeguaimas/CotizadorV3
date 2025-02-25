@@ -14,10 +14,10 @@ body {
   min-height: 100vh;
   margin: 5%;
 
-  background-image: url("./Img/fondoOscuro.png");
-  background-size: contain; /* Ajusta la imagen al tamaño del cuerpo */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  background-position: bottom; /* Centra la imagen en el cuerpo */
+  /*background-image: url("./Img/fondoOscuro.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom; */
 }
 .container {
   max-width: 600px;
