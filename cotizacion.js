@@ -1,4 +1,4 @@
-function generarPDF(logoDataURL) {
+function generarPDF(logoDataURL, qrDataURL) {
   const adultos = document.getElementById("adultos").value;
   const menores = document.getElementById("menores").value;
   const nombre = document.getElementById("nombre").value.toUpperCase();
@@ -18,6 +18,12 @@ function generarPDF(logoDataURL) {
 
   const docDefinition = {
     content: [
+      // Imagen QR en la esquina superior derecha
+      {
+        image: qrDataURL,
+        width: 75, // ~3 cm
+        absolutePosition: { x: 30, y: 30 }, // Ajustar si es necesario
+      },
       {
         margin: [10, 10, 20, 10],
         layout: {
@@ -152,7 +158,8 @@ function generarPDF(logoDataURL) {
                     fontSize: 12,
                   },
                   {
-                    text: "Los precios están sujetos a cambios y/o modificaciones por parte de la Superintendencia de Servicios de Salud de la Nación.",
+                    text:
+                      "Los precios están sujetos a cambios y/o modificaciones por parte de la Superintendencia de Servicios de Salud de la Nación.",
                     style: "footer",
                     margin: [10, 60, 10, 20],
                     fontSize: 12,
@@ -193,18 +200,28 @@ function generarPDF(logoDataURL) {
 const botonGenerarPDF = document.getElementById("botonGenerarPDF");
 botonGenerarPDF.addEventListener("click", function () {
   const logoURL = "Img/mgLogo.png";
+  const qrURL = "Img/Qr1.png"; // Ruta del QR
 
-  fetch(logoURL)
-    .then((response) => response.blob())
-    .then((blob) => {
-      const reader = new FileReader();
-      reader.onloadend = function () {
-        const logoDataURL = reader.result;
-        generarPDF(logoDataURL);
+  Promise.all([fetch(logoURL), fetch(qrURL)])
+    .then(async ([logoRes, qrRes]) => {
+      const logoBlob = await logoRes.blob();
+      const qrBlob = await qrRes.blob();
+
+      const logoReader = new FileReader();
+      const qrReader = new FileReader();
+
+      logoReader.onloadend = function () {
+        const logoDataURL = logoReader.result;
+        qrReader.onloadend = function () {
+          const qrDataURL = qrReader.result;
+          generarPDF(logoDataURL, qrDataURL);
+        };
+        qrReader.readAsDataURL(qrBlob);
       };
-      reader.readAsDataURL(blob);
+
+      logoReader.readAsDataURL(logoBlob);
     })
     .catch((error) => {
-      console.error("Error al cargar la imagen:", error);
+      console.error("Error al cargar imágenes:", error);
     });
 });
