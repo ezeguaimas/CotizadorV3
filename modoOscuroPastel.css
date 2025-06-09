@@ -1,0 +1,97 @@
+body {
+  background-color: #2b2d42;
+  color: #fce4ec;
+}
+
+.container {
+  background-color: #3c3f58;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  color: #ffb3c6;
+}
+
+input[type="number"],
+input[type="text"] {
+  background-color: #4e5166;
+  color: #ffe0ef;
+  border: 2px solid #ffb3c6;
+}
+
+input::placeholder {
+  color: #ffe0efaa;
+}
+
+button {
+  background-color: #ff99bb;
+  color: white;
+}
+
+button:hover {
+  background-color: #ff6f9c;
+}
+
+#botonCotizarPrepago {
+  background-color: #cc71b0;
+}
+
+#borrar {
+  background-color: #999;
+  color: #fff;
+}
+
+p {
+  color: #ffc2d1;
+}
+
+span {
+  color: #ffb6c1;
+}
+
+header {
+  background-color: #41435a;
+}
+
+footer {
+  background-color: #4a4c63;
+  color: #ffbad2;
+}
+
+#mensaje-error {
+  color: #ff6f91;
+}
+
+.buttonIcon {
+  border: 2px solid #ffbad2;
+}
+
+.buttonIcon:hover {
+  background-color: #5e6079;
+}
+
+.buttonText {
+  color: #ffb3c6;
+}
+
+#resultados {
+  background-color: #4a4c63;
+  border: 1px dashed #ff99bb;
+  color: #ffdce7;
+}
+
+#version {
+  color: #ff99bb;
+}
+
+.theme-toggle-btn {
+  background-color: #ff99bb;
+}
+
+.theme-toggle-btn.moon {
+  background-image: url("./Img/moon.png");
+}
+
+.theme-toggle-btn.sun {
+  background-image: url("./Img/sun.png");
+}
